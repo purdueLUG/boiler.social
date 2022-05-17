@@ -14,34 +14,47 @@
       <h1>welcome to <code>boiler.social</code></h1>
     </header>
     <main>
-      <p><code>boiler.social</code> provides a Matrix homeserver for use by Purdue students, faculty, etc. Hosting is physically on campus.</p>
-      <p>To sign up, simply direct your Matrix client of choice to use <code>boiler.social</code> as your homeserver. We'd sugguest using <a href="https://element.io/get-started">Element</a> for new users of Matrix.</p>
-      <h2>use policy</h2>
-      <p>Do not create rooms which violate Purdue's policies on e.g. academic integrity.</p>
-      <p>Do not violate the stated policies (if any) of rooms you join, or otherwise be a nuisance to homeserver administrators.</p>
-      <p>A blanket ban on racism, homophobia, transphobia, discrimination based on major, etc applies to any room published by <code>boiler.social</code>.</p>
-      <p>In summary: Don't make us regret providing this service. The Administration reserves the right to terminate service to any user.</p>
-      <p>
+      <p><code>boiler.social</code> provides a Matrix homeserver and <a href="https://mastodon.boiler.social/">Mastodon instance</a> primarily for use by Purdue students, faculty, etc. Hosting is physically on campus.</p>
+      <p>To simplify account management, we use a single sign on system for both Matrix and Mastodon. Users can register and manage their account from the <a href="https://sso.boiler.social/realms/users.boiler.social/account/">account console.</a></p>
+      <p>For Matrix, simply direct your Matrix client of choice to use <code>boiler.social</code> as your homeserver. Mastodon users can sign in as normal at <a href="https://mastodon.boiler.social/"><code>mastodon.boiler.social</code></a>.</p>
     </main>
-    <hr>
     <section>
-      <h2>on privacy/logging</h2>
-      <p>Access to homeserver logs is restricted to administrators of <code>boiler.social</code>.</p>
-      <p>We have not been asked to provide sensitive information (e.g. logs, TLS keys, password hashes) to law enforcement, government agencies, or other third parties.</p>
+      <h2>use policy, privacy and logging</h2>
+      <p>Do not create Matrix rooms or Mastodon posts ("toots") which violate Purdue's policies on e.g. academic integrity.</p>
+      <p>A blanket ban on racism, homophobia, transphobia, discrimination based on major, etc applies to all services of <code>boiler.social</code>.</p>
+      <p>Do not harass users of boiler.social or other services boiler.social participates in federation with.</p>
+      <p>In summary: Don't make us regret providing this service. Services are provided "at will", and The Administration reserves the right to terminate all service to any user at any time for any reason.</p>
+      <p>In addition, Matrix users must follow all rules of any rooms they participate in. Note that Matrix room admins may be entirely unaffiliated with <code>boiler.social</code> and enforce their own moderation policies.</p>
+      <hr>
+      <p>
+        Access to logs is restricted to administrators of <code>boiler.social</code>.
+        We have not been asked to provide sensitive information (e.g. logs, TLS keys, password hashes) to law enforcement, government agencies, or other third parties.
+        We are based in (and ergo regulated by) the state of Indiana within the United States of America.
+        We are on ITaP's network; you may find their privacy policy <a href="https://www.purdue.edu/policies/information-technology/viib8.html">here.</a>
+      </p>
+      <p>Requests to <code>matrix.boiler.social</code> and <code>mastodon.boiler.social</code>, i.e. the actual services, are handled directly. Static content such as this page and <code>.well-known/matrix</code> is proxied through CloudFlare's CDN.</p>
       <aside>The Matrix protocol leaves the security of some encryption keys up to the end-user. Please encrypt responsibly.</aside>
-      <p>We are based in (and ergo regulated by) the state of Indiana within the United States of America.</p>
-      <p>We are on ITaP's network; you may find their privacy policy <a href="https://www.purdue.edu/policies/information-technology/viib8.html">here.</a></p>
-      <p>Requests to <code>matrix.boiler.social</code>, i.e. the actual homeserver, are handled directly. Requests to <code>boiler.social</code> (static content such as this page and <code>.well-known</code>) are proxied through CloudFlare's CDN.</p>
     </section>
     <section>
       <h2>the news</h2>
       <article>
-          <header>
-              <h3>boiler.social SSO</h3>
-              <small>2022-05-11</small>
-          </header>
-          <p>boiler.social now allows authenticating via OpenID Connect. To be clear, this is still a boiler.social account, on the same infrastructure, administered by the same people. However, in the future, The Administration hopes to provide more than just Matrix on this service, and these hypothetical offerings will use OpenID for authentication.</p>
-          <p>New users should therefore use boiler.social SSO when creating accounts. Existing users may contact The Administration to have OpenID enabled for them (in all likelihood, this will eventually be done automatically for all existing users).</p>
+        <header>
+          <h3>mastodon time</h3>
+          <small>2022-05-17</small>
+        </header>
+        <p>
+          Well, a whole six days after the extremely long muskrat said something silly, <code>boiler.social</code> now has a Mastodon instance!
+          It is available at <a href="https://mastodon.boiler.social/"><code>mastodon.boiler.social</code></a>, and is open to anyone with a boiler.social SSO account.
+          For the moment, we're using a relay to help get federated content into the instance, but that may be turned off in the future as people follow accounts from other places.
+        </p>
+      </article>
+      <article>
+        <header>
+          <h3>boiler.social SSO</h3>
+          <small>2022-05-11</small>
+        </header>
+        <p>boiler.social now allows authenticating via OpenID Connect. To be clear, this is still a boiler.social account, on the same infrastructure, administered by the same people. However, in the future, The Administration hopes to provide more than just Matrix on this service, and these hypothetical offerings will use OpenID for authentication.</p>
+        <p>New users should therefore use boiler.social SSO when creating accounts. Existing users may contact The Administration to have OpenID enabled for them (in all likelihood, this will eventually be done automatically for all existing users).</p>
       </article>
       <article>
         <header>
@@ -54,7 +67,7 @@
     </section>
     <footer>
       <p>
-      <small>brought to you by the <a href="http://purduelug.org/">Purdue Linux User's Group</a>, <a href="https://w9yb.org/">W9YB</a>, Purdue Homelab, and <noscript>you having JavaScript disabled.</noscript><span onclick="set_sponsor()" id="funny-sponsor"></span></small>
+      <small>brought to you by the <a href="https://purduelug.org/">Purdue Linux User's Group</a>, <a href="https://w9yb.org/">W9YB</a>, Purdue Homelab, and <noscript>you having JavaScript disabled.</noscript><span onclick="set_sponsor()" id="funny-sponsor"></span></small>
       </p>
       <p>
         <small>
