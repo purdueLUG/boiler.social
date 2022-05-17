@@ -1,5 +1,5 @@
 const punct = [".", "?", "!"];
-const jokes = ["the Turbo Encabulator", ["His Eminence", "Her Eminence", "Their Eminence"], "not Mitch Daniels", "GNU Hurd", "Microsoft Bob", ["the Foundation", "the letters S, C, and P"], "the Avengers", "the Federal Bureau of Control", "the letter M", "<a href=\"https://xkcd.com/2347/\">many unknown FOSS contributors - thank you</a>!"];
+const jokes = ["the Turbo Encabulator", ["His Eminence", "Her Eminence", "Their Eminence"], "not Mitch Daniels", "GNU Hurd", "Microsoft Bob", "the Foundation", "the letters S, C, and P", "the Avengers", "the Federal Bureau of Control", "the letter M", "<a href=\"https://xkcd.com/2347/\">many FOSS contributors - thank you</a>!", "<a href=\"https://tta.wtf/\">Transcendental Transit</a>", "an unnerving number of containers", "multi-rooted process trees", "a UNIX system - I know this!", "<code>unshare(2)</code>", "recursive <code>make</code> builds", "speculative execution"];
 
 function random_element(arr) {
   const random = Math.floor(Math.random() * arr.length);
