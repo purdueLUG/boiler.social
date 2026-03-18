@@ -1,1 +1,9 @@
-{"m.homeserver": {"base_url": "https://matrix.boiler.social"}}
+{
+  "m.homeserver": {
+    "base_url": "https://matrix.boiler.social/"
+  },
+  "org.matrix.msc2965.authentication": {
+    "issuer":"https://mas.boiler.social/",
+    "account":"https://mas.boiler.social/account/"
+  }
+}
